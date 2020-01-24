@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wuhanvirus.wuhanvirus.dao.DataDao">
+    <insert id="insertData">
+        INSERT INTO tb_data_record
+        <set>
+            province = #{importDataDo.province},
+            confirm = #{importDataDo.confirm},
+            suspect = #{importDataDo.suspect},
+            dead = #{importDataDo.dead},
+            heal = #{importDataDo.heal}
+        </set>
+    </insert>
+
+    <select id="getData" resultType="com.wuhanvirus.wuhanvirus.DO.ImportDataDo">
+        SELECT * FROM tb_data_record
+        <where>
+            province = #{province}
+        </where>
+    </select>
+</mapper>
