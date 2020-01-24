@@ -7,3 +7,5 @@ Following data has been compute:
 heal rate,death rate.
 
 Website link:http://47.100.23.230:8088/
+
+All of the data is for reference ONLY
