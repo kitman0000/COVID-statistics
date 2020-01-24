@@ -28,7 +28,7 @@ public class ImportDataManagerImpl implements IImportDataManager {
     public ImportDataListEntity getRealTimeData() {
         Map<String, String> headerMap = new LinkedHashMap<>();
         String str = HttpClientUtil.httpGet("https://3g.dxy.cn/newh5/view/pneumonia", headerMap, "utf-8");
-        str = str.split("window.getListByCountryTypeService1 = ")[1];
+        str = str.split("window.getAreaStat = ")[1];
         str = str.split("}catch")[0];
 
         str = "{\"importDataListEntityList\":" + str + "}";

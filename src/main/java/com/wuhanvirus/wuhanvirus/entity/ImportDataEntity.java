@@ -1,6 +1,7 @@
 package com.wuhanvirus.wuhanvirus.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import java.util.Date;
@@ -17,7 +18,15 @@ public class ImportDataEntity {
 
     private Date modifyTime;
 
-    private String tags;
+    //private String tags;
+    private int confirmedCount;
+
+    private int suspectedCount;
+
+    @JsonProperty("curedCount")
+    private int healCount;
+
+    private int deadCount;
 
     private int countryType;
 
