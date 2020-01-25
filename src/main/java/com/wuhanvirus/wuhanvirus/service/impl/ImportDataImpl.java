@@ -31,7 +31,7 @@ public class ImportDataImpl implements ImportDataService {
             importDataDo.setConfirm(importDataEntity.getConfirmedCount());
             importDataDo.setDead(importDataEntity.getDeadCount());
             importDataDo.setHeal(importDataEntity.getHealCount());
-            importDataDo.setSuspect(importDataDo.getSuspect());
+            importDataDo.setSuspect(importDataEntity.getSuspectedCount());
 
             nationConfirm += importDataDo.getConfirm();
             nationSuspect += importDataDo.getSuspect();
