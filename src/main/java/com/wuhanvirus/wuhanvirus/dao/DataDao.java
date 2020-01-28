@@ -16,4 +16,6 @@ public interface DataDao {
     void insertData(@Param("importDataDo") ImportDataDo importDataDo);
 
     List<ImportDataDo> getData(String province);
+
+    ImportDataDo getLastData(String province);
 }

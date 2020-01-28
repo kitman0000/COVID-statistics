@@ -19,7 +19,12 @@ public class DisplayDataController {
     DisplayDataService displayDataService;
 
     @RequestMapping(value = "/api/getData",method = RequestMethod.POST)
-    public List<ImportDataDo> login(String province) {
-        return  displayDataService.getData(province);
+    public List<ImportDataDo> getData(String province) {
+        return displayDataService.getData(province);
+    }
+
+    @RequestMapping(value = "/api/getLastData",method = RequestMethod.POST)
+    public ImportDataDo getLastData(String province){
+        return displayDataService.getLastData(province);
     }
 }

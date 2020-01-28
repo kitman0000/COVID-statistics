@@ -18,4 +18,12 @@
             province = #{province}
         </where>
     </select>
+
+    <select id="getLastData" resultType="com.wuhanvirus.wuhanvirus.DO.ImportDataDo">
+        SELECT * FROM tb_data_record
+        <where>
+            province = #{province}
+        </where>
+        order by id desc limit 1;
+    </select>
 </mapper>

@@ -25,7 +25,7 @@ public class SpiderScheduled {
      * 开始时10秒钟一次
      */
 
-    @Scheduled(cron = "0/10 * * * * ?")
+    //@Scheduled(cron = "0/10 * * * * ?")
     //@Scheduled(cron = "0 0 0/1 * * ?")
     public void importRealTimeData(){
        ImportDataListEntity dataListEntity = importDataManager.getRealTimeData();

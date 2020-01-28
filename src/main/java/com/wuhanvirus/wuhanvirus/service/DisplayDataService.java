@@ -9,4 +9,6 @@ import java.util.List;
  */
 public interface DisplayDataService {
     List<ImportDataDo> getData(String province);
+
+    ImportDataDo getLastData(String province);
 }

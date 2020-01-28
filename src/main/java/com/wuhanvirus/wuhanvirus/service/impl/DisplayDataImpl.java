@@ -26,4 +26,13 @@ public class DisplayDataImpl implements DisplayDataService {
         }
         return importDataDoList;
     }
+
+    @Override
+    public ImportDataDo getLastData(String province) {
+        ImportDataDo importDataDo = dataDao.getLastData(province);
+        if(importDataDo == null) return null;
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH点");
+        importDataDo.setUpdateTimeStr(formatter.format(importDataDo.getUpdateTime()));
+        return importDataDo;
+    }
 }
