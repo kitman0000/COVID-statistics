@@ -1,5 +1,5 @@
-# Wuhan-virus-statistics
-Wuhan virus statistics,data from https://3g.dxy.cn/newh5/view/pneumonia 
+# COVID-statistics
+COVID statistics,data from https://3g.dxy.cn/newh5/view/pneumonia 
 This system will automatically download data once a hour.
 Following data has been concerned:
 Confirmed diagnosis number,suspect number,heal number,death number.
